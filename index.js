@@ -23,6 +23,14 @@ io.on("connection", (socket) => {
 
     socket.on('changeConfig',(arg)=>{
         socket.broadcast.emit('changeConfig',arg);
+    });
+
+    socket.on('menuItem',(arg)=>{
+        socket.broadcast.emit('menuItem',arg);
+    })
+
+    socket.on('actionItem',(arg)=>{
+        socket.broadcast.emit('actionItem',arg);
     })
 });
 
